@@ -1,8 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+
 import 'dart:async';
 
 import 'package:tourist/models/districts.dart';
 import 'package:tourist/service_api/service_api.dart';
+import 'service_api/service_api.dart';
 
 void main() {
   runApp(const CallingData());
@@ -31,12 +35,27 @@ class CallingData extends StatefulWidget {
 }
 
 class _CallingDataState extends State<CallingData> {
-  late Future<Districts> futureDistrict;
-
+  String txt = '';
   @override
   void initState() {
     super.initState();
   }
+
+  //List<String> Result = data();
+
+  late Future<Districts> futureDistrict;
+
+  // Future<Attributes> getData() async {
+  //   final response =
+  //       await http.get(Uri.parse('http://localhost:1337/api/districts'));
+  //   print(response.body.toString());
+
+  //   if (response.statusCode == 200) {
+  //     return Attributes.fromJson(json.decode(response.body));
+  //   } else {
+  //     throw Exception('Failed to load album');
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -50,11 +69,21 @@ class _CallingDataState extends State<CallingData> {
             title: const Text('Fetch Data Example'),
           ),
           body: Center(
-            child: ElevatedButton(
-                onPressed: () async {
-                  await ServiceApi().getData();
-                },
-                child: const Text("Check")),
+            child: Column(children: [
+              Text(txt),
+              ElevatedButton(
+                  onPressed: () async {
+                    var data = await ServiceApi().getdata();
+                    setState(() {
+                      txt = data.toString();
+                    });
+                  },
+                  child: const Text("Check")),
+              const SizedBox(
+                height: 30,
+              ),
+              //  Center(child: Text('data')),
+            ]),
           ),
           // body: Center(
           //   child: FutureBuilder<Districts>(

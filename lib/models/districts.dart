@@ -28,6 +28,10 @@ class Districts {
       };
 }
 
+Datum datumFromJson(String str) => Datum.fromJson(json.decode(str));
+
+String datumToJson(Datum data) => json.encode(data.toJson());
+
 class Datum {
   Datum({
     required this.id,
