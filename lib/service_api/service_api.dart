@@ -1,26 +1,21 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:http/http.dart' as http;
-
-import '../models/districts.dart';
+import 'package:tourist/models/user.model.dart';
 
 class ServiceApi {
-  getdata() async {
+  Future<List<UserModel>> getdata() async {
     //var dataok = {"district_name": "Langthabal"};
-    final response = await http.get(
-        Uri.parse('http://localhost:1337/api/districts/1')
-        //     , body: {
-        //   "data": {
-        //     "attributes":
-        //         {"id": 8.toString(), "attributes": "districts_name"}.toString()
-        //   }.toString()
-        // }
-        );
+    final response =
+        await http.get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
 
     if (response.statusCode == 200) {
-      // If the server did return a 200 OK response,
-      // then parse the JSON.
-      return jsonDecode(response.body);
+      var data = response.body;
+      var d = jsonDecode(data) as List;
+      var user = d.map((e) => UserModel.fromJson(e)).toList();
+
+      return user;
     } else {
       // If the server did not return a 200 OK response,
       // then throw an exception.
