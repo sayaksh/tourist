@@ -1,76 +1,104 @@
-import 'dart:convert';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:tourist/models/user.model.dart';
 
-import 'dart:async';
+import 'package:tourist/router/router.gr.dart';
 
-import 'package:tourist/service_api/service_api.dart';
-import 'service_api/service_api.dart';
+void main() => runApp(const MyApp());
 
-void main() {
-  runApp(const CallingData());
-}
-
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  final _appRouter = AppRouter();
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const CallingData(),
+    return MaterialApp.router(
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
+      title: 'Flutter ListView ',
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class CallingData extends StatefulWidget {
-  const CallingData({Key? key}) : super(key: key);
 
-  @override
-  State<CallingData> createState() => _CallingDataState();
-}
 
-class _CallingDataState extends State<CallingData> {
-  String txt = '';
-  @override
-  void initState() {
-    super.initState();
-    getData();
-  }
-
-  List<UserModel> data = [];
-
-  getData() async {
-    var d = await ServiceApi().getdata();
-    setState(() {
-      data = d;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Fetch Data Example'),
-          ),
-          body: ListView.builder(
-              itemCount: data.length,
-              itemBuilder: (c, i) {
-                return ListTile(
-                  title: Text(data[i].name),
-                  subtitle: Text(data[i].email),
-                );
-              })),
-    );
-  }
-}
+ // Row(
+                  //   children: [
+                  //     ElevatedButton(
+                  //       onPressed: () {
+                  //         showDialog(
+                  //             context: context,
+                  //             builder: (context) {
+                  //               return AlertDialog(
+                  //                 actions: [
+                  //                   TextButton(
+                  //                       onPressed: () {
+                  //                         ServiceApi().putData(data[i].id,
+                  //                             disNameController.text);
+                  //                         Navigator.pop(context);
+                  //                       },
+                  //                       child: const Text("Upd"))
+                  //                 ],
+                  //                 title: const Text("Update"),
+                  //                 content: Column(
+                  //                   mainAxisSize: MainAxisSize.min,
+                  //                   children: [
+                  //                     TextField(
+                  //                       controller: disNameController,
+                  //                     ),
+                  //                   ],
+                  //                 ),
+                  //               );
+                  //             });
+                  //       },
+                  //       child: const Text("Upd"),
+                  //     ),
+                  //     ElevatedButton(
+                  //       onPressed: () async {
+                  //         await ServiceApi().deleteData(data[i].id);
+                  //       },
+                  //       child: const Text("Del"),
+                  //     ),
+                  //   ],
+                  // ),
+                  // FloatingActionButton(
+                  //     onPressed: () {
+                  //       showDialog(
+                  //           context: context,
+                  //           builder: (context) {
+                  //             return AlertDialog(
+                  //               title: const Text('Add new district'),
+                  //               content: Container(
+                  //                 height: 100,
+                  //                 child: Column(
+                  //                   children: [
+                  //                     TextField(
+                  //                       decoration: const InputDecoration(
+                  //                           labelText:
+                  //                               'Enter district name'),
+                  //                       controller: control_1,
+                  //                     ),
+                  //                     SizedBox(
+                  //                       height: 10,
+                  //                     ),
+                  //                     ElevatedButton(
+                  //                         onPressed: () async {
+                  //                           await ServiceApi()
+                  //                               .postData(control_1.text);
+                  //                           setState(() {
+                  //                             data = data.toList();
+                  //                           });
+                  //                           Navigator.of(context).pop();
+                  //                         },
+                  //                         child: const Text('Add'))
+                  //                   ],
+                  //                 ),
+                  //               ),
+                  //             );
+                  //           });
+                  //     },
+                  //     child: const Icon(Icons.add))
