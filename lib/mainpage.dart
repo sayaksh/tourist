@@ -1,60 +1,97 @@
 import 'package:flutter/material.dart';
-import 'package:tourist/model/districts.dart';
-import 'package:tourist/routes.dart';
 
-import 'package:tourist/service/serviceapi.dart';
+import 'model/district.model.dart';
 
-class DistrictsPage extends StatefulWidget {
-  const DistrictsPage({
+class MainDistrictPage extends StatefulWidget {
+  const MainDistrictPage({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<DistrictsPage> createState() => _DistrictsPageState();
+  State<MainDistrictPage> createState() => _MainDistrictPageState();
 }
 
-class _DistrictsPageState extends State<DistrictsPage> {
-  List<Datum> data = [];
+class _MainDistrictPageState extends State<MainDistrictPage> {
+  // List<Datum> data = [];
+
+  List<DistrictModel> listModels = [];
+
+  List<Map<String, dynamic>> serverData = [
+    {
+      "id": 1,
+      "attributes": {
+        "state_id": 1,
+        "district_name": "Kangpokpi",
+        "createdAt": "2022-08-04T10:40:56.774Z",
+        "updatedAt": "2022-08-04T10:40:56.774Z",
+        "publishedAt": "2022-08-04T10:40:56.771Z",
+        "spots": [
+          {"spotName": "spot1", "img_url": ""},
+          {"spotName": "spot2", "img_url": ""},
+          {"spotName": "spot3", "img_url": ""}
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "state_id": 1,
+        "district_name": "Imphal West",
+        "createdAt": "2022-08-04T10:40:56.774Z",
+        "updatedAt": "2022-08-04T10:40:56.774Z",
+        "publishedAt": "2022-08-04T10:40:56.771Z",
+        "spots": [
+          {"spotName": "spot1", "img_url": ""},
+          {"spotName": "spot2", "img_url": ""},
+          {"spotName": "spot3", "img_url": ""}
+        ]
+      }
+    }
+  ];
 
   @override
   void initState() {
     super.initState();
-    getData();
+    convertMapToObject();
   }
 
-  getData() async {
-    var districtsData = await ServiceApi().fetchData();
+  // getData() async {
+  //   var districtsData = await ServiceApi().fetchData();
+
+  //   setState(() {
+  //     data = districtsData.data;
+  //   });
+  // }
+
+  convertMapToObject() {
+    var d = serverData.map((e) {
+      return DistrictModel.fromJson(e);
+    }).toList();
 
     setState(() {
-      data = districtsData.data;
+      listModels = d;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: data.length,
-        itemBuilder: ((context, i) {
-          return Padding(
-            padding: const EdgeInsets.all(16),
-            child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        // builder: (context) => const Bishnupur()
-                        builder: (BuildContext context) => makeRoute(
-                          context: context,
-                          routeName: '/Bishnupur',
-                          districtId: data[i].id,
-                        ),
-                      ));
-                },
-                child: Text(
-                  data[i].attributes.districtName,
-                  style: const TextStyle(fontSize: 20),
-                )),
-          );
-        }));
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("All Districts"),
+      ),
+      body: ListView.builder(
+          itemCount: listModels.length,
+          itemBuilder: ((context, i) {
+            return Padding(
+              padding: const EdgeInsets.all(16),
+              child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    listModels[i].attributes.districtName,
+                    style: const TextStyle(fontSize: 20),
+                  )),
+            );
+          })),
+    );
   }
 }

@@ -1,13 +1,13 @@
 import 'package:auto_route/annotations.dart';
-import 'package:tourist/districts/kakching.thoubal.dart';
 
-import 'package:tourist/mainpage.dart';
+import '../pages/all_district.page.dart';
+import '../pages/districts_detail.page.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
-  routes: <AutoRoute>[
-    AutoRoute(page: DistrictsPage, initial: true),
-    AutoRoute(page: KakchingPage),
+  routes: [
+    AutoRoute(page: MainDistrictPage, initial: true),
+    AutoRoute(page: DistrictDetailPage),
   ],
 )
 class $AppRouter {}
