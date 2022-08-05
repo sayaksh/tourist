@@ -36,7 +36,7 @@ class _DistrictsPageState extends State<DistrictsPage> {
         itemCount: data.length,
         itemBuilder: ((context, i) {
           return Padding(
-            padding: const EdgeInsets.all(5.0),
+            padding: const EdgeInsets.all(16),
             child: TextButton(
                 onPressed: () {
                   Navigator.push(
