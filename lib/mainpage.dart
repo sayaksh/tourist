@@ -77,7 +77,7 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("All Districts"),
+        title: const Text("All Districts"),
       ),
       body: ListView.builder(
           itemCount: listModels.length,

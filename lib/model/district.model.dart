@@ -4,12 +4,10 @@
 
 import 'dart:convert';
 
-List<DistrictModel> districtModelFromJson(String str) =>
-    List<DistrictModel>.from(
-        json.decode(str).map((x) => DistrictModel.fromJson(x)));
+DistrictModel districtModelFromJson(String str) =>
+    DistrictModel.fromJson(json.decode(str));
 
-String districtModelToJson(List<DistrictModel> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String districtModelToJson(DistrictModel data) => json.encode(data.toJson());
 
 class DistrictModel {
   DistrictModel({
@@ -35,6 +33,7 @@ class Attributes {
   Attributes({
     required this.stateId,
     required this.districtName,
+    required this.description,
     required this.createdAt,
     required this.updatedAt,
     required this.publishedAt,
@@ -43,6 +42,7 @@ class Attributes {
 
   final int stateId;
   final String districtName;
+  final String description;
   final DateTime createdAt;
   final DateTime updatedAt;
   final DateTime publishedAt;
@@ -51,6 +51,7 @@ class Attributes {
   factory Attributes.fromJson(Map<String, dynamic> json) => Attributes(
         stateId: json["state_id"],
         districtName: json["district_name"],
+        description: json["description"],
         createdAt: DateTime.parse(json["createdAt"]),
         updatedAt: DateTime.parse(json["updatedAt"]),
         publishedAt: DateTime.parse(json["publishedAt"]),
@@ -60,6 +61,7 @@ class Attributes {
   Map<String, dynamic> toJson() => {
         "state_id": stateId,
         "district_name": districtName,
+        "description": description,
         "createdAt": createdAt.toIso8601String(),
         "updatedAt": updatedAt.toIso8601String(),
         "publishedAt": publishedAt.toIso8601String(),

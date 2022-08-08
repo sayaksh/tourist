@@ -32,7 +32,9 @@ class AppRouter extends _i3.RootStackRouter {
       return _i3.MaterialPageX<dynamic>(
           routeData: routeData,
           child: _i2.DistrictDetailPage(
-              key: args.key, districName: args.districName));
+              key: args.key,
+              districName: args.districName,
+              description: args.description));
     }
   };
 
@@ -54,23 +56,28 @@ class MainDistrictRoute extends _i3.PageRouteInfo<void> {
 /// generated route for
 /// [_i2.DistrictDetailPage]
 class DistrictDetailRoute extends _i3.PageRouteInfo<DistrictDetailRouteArgs> {
-  DistrictDetailRoute({_i4.Key? key, required String districName})
+  DistrictDetailRoute(
+      {_i4.Key? key, required String districName, required String description})
       : super(DistrictDetailRoute.name,
             path: '/district-detail-page',
-            args: DistrictDetailRouteArgs(key: key, districName: districName));
+            args: DistrictDetailRouteArgs(
+                key: key, districName: districName, description: description));
 
   static const String name = 'DistrictDetailRoute';
 }
 
 class DistrictDetailRouteArgs {
-  const DistrictDetailRouteArgs({this.key, required this.districName});
+  const DistrictDetailRouteArgs(
+      {this.key, required this.districName, required this.description});
 
   final _i4.Key? key;
 
   final String districName;
 
+  final String description;
+
   @override
   String toString() {
-    return 'DistrictDetailRouteArgs{key: $key, districName: $districName}';
+    return 'DistrictDetailRouteArgs{key: $key, districName: $districName, description: $description}';
   }
 }
