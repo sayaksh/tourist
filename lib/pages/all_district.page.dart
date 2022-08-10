@@ -47,12 +47,9 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/bishnupur/loktak_lake.jpg"},
-          {
-            "spotName": "spot2",
-            "img_url": "assets/bishnupur/keibul_lamjao_4.jpg"
-          },
-          {"spotName": "spot3", "img_url": "assets/bishnupur/loukoi_pat_1.jpg"}
+          {"spotName": "spot1", "img_url": "bishnupur/loktak_lake.jpg"},
+          {"spotName": "spot2", "img_url": "bishnupur/keibul_lamjao_4.jpg"},
+          {"spotName": "spot3", "img_url": "bishnupur/loukoi_pat_1.jpg"}
         ]
       }
     },
@@ -67,9 +64,9 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/bishnupur/loktak_lake.jpg"},
-          {"spotName": "spot2", "img_url": "assets/bishnupur/loktak_lake.jpg"},
-          {"spotName": "spot3", "img_url": "assets/bishnupur/loktak_lake.jpg"}
+          {"spotName": "spot1", "img_url": "bishnupur/loktak_lake.jpg"},
+          {"spotName": "spot2", "img_url": "bishnupur/loktak_lake.jpg"},
+          {"spotName": "spot3", "img_url": "bishnupur/loktak_lake.jpg"}
         ]
       }
     },
@@ -84,9 +81,9 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/east/sanamahi_5.jpg"},
-          {"spotName": "spot2", "img_url": "assets/east/war_cemetary_3.jpg"},
-          {"spotName": "spot3", "img_url": "assets/east/govindaji_1.jpg"}
+          {"spotName": "spot1", "img_url": "east/sanamahi_5.jpg"},
+          {"spotName": "spot2", "img_url": "east/war_cemetary_3.jpg"},
+          {"spotName": "spot3", "img_url": "east/govindaji_1.jpg"}
         ]
       }
     },
@@ -340,9 +337,11 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
             child: TextButton(
               onPressed: () {
                 context.router.push(DistrictDetailRoute(
-                  districName: listModels[i].attributes.districtName,
-                  description: listModels[i].attributes.description,
-                ));
+                    districName: listModels[i].attributes.districtName,
+                    description: listModels[i].attributes.description,
+                    imgUrl: listModels[i].attributes.spots
+                    //imgUrl: listModels[i].attributes.spots.imgUrl
+                    ));
               },
               child: Text(
                 listModels[i].attributes.districtName,

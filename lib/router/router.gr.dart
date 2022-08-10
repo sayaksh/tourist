@@ -14,6 +14,7 @@
 import 'package:auto_route/auto_route.dart' as _i3;
 import 'package:flutter/material.dart' as _i4;
 
+import '../model/district.model.dart' as _i5;
 import '../pages/all_district.page.dart' as _i1;
 import '../pages/districts_detail.page.dart' as _i2;
 
@@ -34,7 +35,8 @@ class AppRouter extends _i3.RootStackRouter {
           child: _i2.DistrictDetailPage(
               key: args.key,
               districName: args.districName,
-              description: args.description));
+              description: args.description,
+              imgUrl: args.imgUrl));
     }
   };
 
@@ -57,18 +59,27 @@ class MainDistrictRoute extends _i3.PageRouteInfo<void> {
 /// [_i2.DistrictDetailPage]
 class DistrictDetailRoute extends _i3.PageRouteInfo<DistrictDetailRouteArgs> {
   DistrictDetailRoute(
-      {_i4.Key? key, required String districName, required String description})
+      {_i4.Key? key,
+      required String districName,
+      required String description,
+      required List<_i5.Spot> imgUrl})
       : super(DistrictDetailRoute.name,
             path: '/district-detail-page',
             args: DistrictDetailRouteArgs(
-                key: key, districName: districName, description: description));
+                key: key,
+                districName: districName,
+                description: description,
+                imgUrl: imgUrl));
 
   static const String name = 'DistrictDetailRoute';
 }
 
 class DistrictDetailRouteArgs {
   const DistrictDetailRouteArgs(
-      {this.key, required this.districName, required this.description});
+      {this.key,
+      required this.districName,
+      required this.description,
+      required this.imgUrl});
 
   final _i4.Key? key;
 
@@ -76,8 +87,10 @@ class DistrictDetailRouteArgs {
 
   final String description;
 
+  final List<_i5.Spot> imgUrl;
+
   @override
   String toString() {
-    return 'DistrictDetailRouteArgs{key: $key, districName: $districName, description: $description}';
+    return 'DistrictDetailRouteArgs{key: $key, districName: $districName, description: $description, imgUrl: $imgUrl}';
   }
 }
