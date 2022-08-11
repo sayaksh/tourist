@@ -30,9 +30,14 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": ""},
-          {"spotName": "spot2", "img_url": ""},
-          {"spotName": "spot3", "img_url": ""}
+          {"spotName": "spot1", "img_url": "bishnupur/loktak_lake.jpg"},
+          {"spotName": "spot2", "img_url": "bishnupur/loktak_lake.jpg"},
+          {"spotName": "spot3", "img_url": "bishnupur/loktak_lake.jpg"},
+          {"spotName": "spot4", "img_url": "bishnupur/loktak_lake.jpg"},
+          {"spotName": "spot5", "img_url": "bishnupur/keibul_lamjao_4.jpg"},
+          {"spotName": "spot6", "img_url": "bishnupur/loukoi_pat_1.jpg"},
+          {"spotName": "spot7", "img_url": "bishnupur/loukoi_pat_1.jpg"},
+          {"spotName": "spot8", "img_url": "bishnupur/loukoi_pat_1.jpg"}
         ]
       }
     },
@@ -48,8 +53,6 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
           {"spotName": "spot1", "img_url": "bishnupur/loktak_lake.jpg"},
-          {"spotName": "spot2", "img_url": "bishnupur/keibul_lamjao_4.jpg"},
-          {"spotName": "spot3", "img_url": "bishnupur/loukoi_pat_1.jpg"}
         ]
       }
     },
@@ -66,7 +69,10 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "spots": [
           {"spotName": "spot1", "img_url": "bishnupur/loktak_lake.jpg"},
           {"spotName": "spot2", "img_url": "bishnupur/loktak_lake.jpg"},
-          {"spotName": "spot3", "img_url": "bishnupur/loktak_lake.jpg"}
+          {"spotName": "spot3", "img_url": "bishnupur/loktak_lake.jpg"},
+          {"spotName": "spot4", "img_url": "bishnupur/loukoi_pat_1.jpg"},
+          {"spotName": "spot5", "img_url": "bishnupur/loukoi_pat_1.jpg"},
+          {"spotName": "spot6", "img_url": "bishnupur/loukoi_pat_1.jpg"}
         ]
       }
     },
@@ -82,8 +88,11 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
           {"spotName": "spot1", "img_url": "east/sanamahi_5.jpg"},
-          {"spotName": "spot2", "img_url": "east/war_cemetary_3.jpg"},
-          {"spotName": "spot3", "img_url": "east/govindaji_1.jpg"}
+          {"spotName": "spot2", "img_url": "east/war_cemetary_3.jpeg"},
+          {"spotName": "spot3", "img_url": "east/govindaji_1.jpg"},
+          {"spotName": "spot4", "img_url": "east/sanamahi_5.jpg"},
+          {"spotName": "spot5", "img_url": "east/war_cemetary_3.jpeg"},
+          {"spotName": "spot6", "img_url": "east/govindaji_1.jpg"}
         ]
       }
     },
@@ -98,9 +107,13 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/Kangla.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/nupilal.JPG"}
+          {"spotName": "spot1", "img_url": "west/Kangla.jpg"},
+          {"spotName": "spot2", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot3", "img_url": "west/nupilal.jpg"},
+          {"spotName": "spot4", "img_url": "west/ima_market.jpg"},
+          {"spotName": "spot5", "img_url": "west/singda_1.jpg"},
+          {"spotName": "spot6", "img_url": "west/state_museum.jpg"},
+          {"spotName": "spot7", "img_url": "west/zoo_1.jpg"},
         ]
       }
     },
@@ -115,9 +128,9 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot2", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot3", "img_url": "west/shaheed-minar.jpg"}
         ]
       }
     },
@@ -132,9 +145,7 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
         ]
       }
     },
@@ -149,9 +160,8 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot2", "img_url": "west/shaheed-minar.jpg"},
         ]
       }
     },
@@ -166,9 +176,7 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
         ]
       }
     },
@@ -183,9 +191,9 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          // {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
+          // {"spotName": "spot2", "img_url": "west/shaheed-minar.jpg"},
+          // {"spotName": "spot3", "img_url": "west/shaheed-minar.jpg"}
         ]
       }
     },
@@ -200,9 +208,8 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot2", "img_url": "west/shaheed-minar.jpg"},
         ]
       }
     },
@@ -217,9 +224,9 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot2", "img_url": "/west/shaheed-minar.jpg"},
+          {"spotName": "spot3", "img_url": "west/shaheed-minar.jpg"}
         ]
       }
     },
@@ -234,9 +241,8 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot2", "img_url": "west/shaheed-minar.jpg"},
         ]
       }
     },
@@ -251,9 +257,8 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot2", "img_url": "west/shaheed-minar.jpg"},
         ]
       }
     },
@@ -268,9 +273,8 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot2", "img_url": "west/shaheed-minar.jpg"},
         ]
       }
     },
@@ -285,9 +289,9 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         "updatedAt": "2022-08-04T10:40:56.774Z",
         "publishedAt": "2022-08-04T10:40:56.771Z",
         "spots": [
-          {"spotName": "spot1", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot2", "img_url": "assets/west/shaheed-minar.jpg"},
-          {"spotName": "spot3", "img_url": "assets/west/shaheed-minar.jpg"}
+          {"spotName": "spot1", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot2", "img_url": "west/shaheed-minar.jpg"},
+          {"spotName": "spot3", "img_url": "west/shaheed-minar.jpg"}
         ]
       }
     },
@@ -328,7 +332,7 @@ class _MainDistrictPageState extends State<MainDistrictPage> {
         ),
         centerTitle: true,
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.white70,
       body: ListView.builder(
         itemCount: listModels.length,
         itemBuilder: ((context, i) {
